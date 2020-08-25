@@ -7,3 +7,5 @@ const beats = _ => {
     let beats = ((s + (m * 60) + (h * 3600))) / 86.4;
     document.getElementById("beats").innerHTML = beats;
 }
+
+let interval = window.setInterval(beats);
