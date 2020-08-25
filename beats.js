@@ -7,4 +7,4 @@ const beats = _ => {
     //document.getElementById("beats").innerHTML = Math.round(beats*100)/100;
 }
 
-let interval = window.setInterval(beats);
+let interval = window.setInterval(beats,1000);
