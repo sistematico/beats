@@ -1,11 +1,10 @@
 const beats = _ => {
-    //((UTC+1minutes * 60) + (UTC+1hours * 3600)) / 86.4
-    //((UTC+1minutes * 60) + (UTC+1hours * 3600)) / 86.4
-    let d = new Date()
-    let h = d.getUTCHours()
-    let m = d.getUTCMinutes()
-    let beats = ((m * 60) + (h * 3600)) / 86.4;
-    document.getElementById("beats").innerHTML = Math.round((beats + Number.EPSILON) * 100) / 100;
+    let data = new Date()
+    let hora = data.getUTCHours()
+    let minuto = data.getUTCMinutes()
+    let beats = ((minuto * 60)+(hora*3600))/86.4;
+    //document.getElementById("beats").innerHTML = Math.round((beats + Number.EPSILON) * 100) / 100;
+    document.getElementById("beats").innerHTML = Math.round(beats*100)/100;
 }
 
 let interval = window.setInterval(beats);
