@@ -4,7 +4,7 @@ const beats = _ => {
     let h = d.getUTCHours()
     let m = d.getUTCMinutes()
     let s = d.getUTCSeconds()
-    let beats = s + (m * 60) + (h * 3600) / 86.4;
+    let beats = (s + ((m * 60) + (h * 3600))) / 86.4;
     document.getElementById("beats").innerHTML = Math.round((beats + Number.EPSILON) * 100) / 100;
 }
 
